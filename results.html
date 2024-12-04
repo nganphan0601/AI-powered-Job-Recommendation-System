@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Matches</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Top Job Recommendations</h1>
+    <ul>
+        {% for job in jobs %}
+        <li>
+            <strong>{{ job['title'] }}</strong> at {{ job['company'] }}
+            <p><strong>Location:</strong> {{ job['location'] }}</p>
+            <p><strong>Industry:</strong> {{ job['industry'] }}</p>
+            <p><strong>Salary Estimate:</strong> {{ job['salary'] }}</p>
+            <p><strong>Description:</strong></p>
+            <ul>
+                {% for point in job['description'] %}
+                <li>{{ point }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
