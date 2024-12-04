@@ -1,5 +1,16 @@
 # AI-powered-Job-Recommendation-System
 # Job Recommendation System
+##Structure for the project folder
+- app.py
+- requirements.txt
+- user_data.db
+- dataset(.csv)
+- /templates
+    - index.html
+    - results.html
+- /static
+    - styles.css
+
 ## Instructions
 1. Install Python.
 2. Navigate to the project folder: cd path\to\your\project\folder
